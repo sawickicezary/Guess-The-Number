@@ -15,7 +15,7 @@ using namespace std;
 
 int* geometric_string(int iFirstNumber, int iFactor)
 {
-	int result[] = { iFirstNumber,
+	int static result[] = { iFirstNumber,
 					iFirstNumber * iFactor,
 					iFirstNumber * iFactor * iFactor,
 					iFirstNumber * iFactor * iFactor * iFactor };
@@ -24,7 +24,7 @@ int* geometric_string(int iFirstNumber, int iFactor)
 
 int* arithmetic_string(int iFirstNumber, int iFactor)
 {
-	int result[] = { iFirstNumber,
+	int static result[] = { iFirstNumber,
 					iFirstNumber + iFactor,
 					iFirstNumber + iFactor + iFactor,
 					iFirstNumber + iFactor + iFactor + iFactor };
@@ -114,9 +114,13 @@ void game()
 	bool bGuessed;
 	bGuessed = verify_result(iGuess, iString[3]);
 	if (bGuessed)
+	{
 		cout << "You guessed correctly!";
+	}
 	else
+	{
 		cout << "You lost!";
+
 }
 void description()
 {
