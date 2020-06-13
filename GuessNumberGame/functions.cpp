@@ -120,9 +120,7 @@ void game()
 	else
 	{
 		cout << "You lost!";
-	}
-	
-	
+
 }
 void description()
 {
