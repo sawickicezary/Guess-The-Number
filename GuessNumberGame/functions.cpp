@@ -117,9 +117,6 @@ void game()
 		cout << "You guessed correctly!";
 	else
 		cout << "You lost!";
-	
-	
-	
 }
 void description()
 {
