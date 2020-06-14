@@ -12,6 +12,7 @@
 //
 // AUTHOR:             Cezary Sawicki
 ///////////////////////////////////////////////////////////////////
+
 #include <stdlib.h>
 #include <iostream>
 #include <time.h>
