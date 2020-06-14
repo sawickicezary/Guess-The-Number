@@ -13,22 +13,22 @@
 
 using namespace std;
 
-int* geometric_string(int iFirstNumber, int iFactor)
+int* geometric_string(int iFirstNumber, int iFactor, int * tab)
 {
-	int static result[] = { iFirstNumber,
-					iFirstNumber * iFactor,
-					iFirstNumber * iFactor * iFactor,
-					iFirstNumber * iFactor * iFactor * iFactor };
-	return result;
+	tab[0] = iFirstNumber;
+	tab[1] = iFirstNumber * iFactor;
+	tab[2] = iFirstNumber* iFactor* iFactor;
+	tab[3] = iFirstNumber * iFactor * iFactor * iFactor;
+	return tab;
 }
 
-int* arithmetic_string(int iFirstNumber, int iFactor)
+int* arithmetic_string(int iFirstNumber, int iFactor, int * tab)
 {
-	int static result[] = { iFirstNumber,
-					iFirstNumber + iFactor,
-					iFirstNumber + iFactor + iFactor,
-					iFirstNumber + iFactor + iFactor + iFactor };
-	return result;
+	for (int i = 0; i < 4; i++)
+	{
+		tab[i] = iFirstNumber + (i * iFactor);
+	}
+	return tab;
 }
 
 bool verify_result(int iUserInput, int iExpectedResult)
@@ -39,7 +39,7 @@ bool verify_result(int iUserInput, int iExpectedResult)
 		return false;
 }
 
-int* generated_string()
+int* generated_string(int * tab)
 {	
 	int iFactor = rand() % 100 + 1;
 	int iFirstNumber = rand() % 100 + 1;
@@ -47,9 +47,9 @@ int* generated_string()
 	int* iNumbers;
 
 	if (iStringType)
-		iNumbers = geometric_string(iFirstNumber, iFactor);
+		iNumbers = geometric_string(iFirstNumber, iFactor, tab);
 	else
-		iNumbers = arithmetic_string(iFirstNumber, iFactor);
+		iNumbers = arithmetic_string(iFirstNumber, iFactor, tab);
 
 	return iNumbers;
 }
@@ -105,9 +105,9 @@ void choice(int iChoice)
 
 void game()
 {
-	int* iString;
 	srand(time(NULL));
-	iString = generated_string();
+	int * iString = new int[4];
+	generated_string(iString);
 
 	cout << endl << "Wyrazy ciagu: " << iString[0] << " " << iString[1] << " " << iString[2] << endl;
 	int iGuess = get_user_input();
@@ -116,10 +116,12 @@ void game()
 	if (bGuessed)
 	{
 		cout << "You guessed correctly!";
+		delete[] iString;
 	}
 	else
 	{
 		cout << "You lost!";
+		delete[] iString;
 	}
 }
 void description()
