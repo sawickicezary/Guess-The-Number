@@ -2,11 +2,14 @@
 ///////////////////////////////////////////////////////////////////
 // NAME:               functions.h
 //
-// PURPOSE:            Definitions of functions required to run program.
+// PURPOSE:            Declarations of functions required to run program.
 //
 // FUNCTIONS/OBJECTS:  geometric_string
 //                     arithmetic_string
 //                     verify_result
+//					   welcome_screen
+//					   get_user_input
+//					   choice
 //
 // AUTHOR:             Cezary Sawicki
 ///////////////////////////////////////////////////////////////////
