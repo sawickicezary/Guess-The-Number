@@ -153,6 +153,9 @@
   <ItemGroup>
     <ClInclude Include="functions.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Downloads\Flowchart.pdf" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
