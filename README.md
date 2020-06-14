@@ -11,8 +11,8 @@ Everytime you win or loose, you are able to play again, show help or quit.
 Project created with Visual Studio 2019 Community Version and used with compilator Visual C++ 2019.
 
 Used libraries:
-<iostream>
-<time.h>
-<stdlib.h>
+"<iostream>"
+"<time.h>"
+"<stdlib.h>"
 
 Author: Cezary Sawicki
