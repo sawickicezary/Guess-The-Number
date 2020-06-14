@@ -1,6 +1,17 @@
-#include <iostream>
+///////////////////////////////////////////////////////////////////
+// NAME:               main.cpp
+//
+// PURPOSE:            Main drive to run program.
+//
+// FUNCTIONS/OBJECTS:  main			   
+//					   
+//
+// AUTHOR:             Cezary Sawicki
+///////////////////////////////////////////////////////////////////
 
+#include <iostream>
 #include "functions.h"
+
 
 
 using namespace std;

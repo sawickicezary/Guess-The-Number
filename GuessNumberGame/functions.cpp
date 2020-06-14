@@ -1,9 +1,14 @@
 ///////////////////////////////////////////////////////////////////
 // NAME:               functions.cpp
 //
-// PURPOSE:            Generating main string for program.
+// PURPOSE:            Definitions of functions required to run program.
 //
-// FUNCTIONS/OBJECTS:  generated_string
+// FUNCTIONS/OBJECTS:  geometric_string
+//                     arithmetic_string
+//                     verify_result
+//					   welcome_screen
+//					   get_user_input
+//					   choice
 //
 // AUTHOR:             Cezary Sawicki
 ///////////////////////////////////////////////////////////////////
