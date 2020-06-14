@@ -16,7 +16,6 @@
 #include <iostream>
 #include <time.h>
 
-using namespace std;
 
 int* geometric_string(int iFirstNumber, int iFactor, int * tab)
 {
@@ -61,25 +60,25 @@ int* generated_string(int * tab)
 
 void welcome_screen()
 {
-	cout << "Welcome in game made by Cezary Sawicki!" << endl;
-	cout << "[ + ] Write 1 to play a game" << endl;
-	cout << "[ + ] Write 2 to read description of game" << endl;
-	cout << "[ + ] Write 3 to quit" << endl;
+	std::cout << "Welcome in game made by Cezary Sawicki!" << std::endl;
+	std::cout << "[ + ] Write 1 to play a game" << std::endl;
+	std::cout << "[ + ] Write 2 to read description of game" << std::endl;
+	std::cout << "[ + ] Write 3 to quit" << std::endl;
 }
 
 int get_user_input()
 {
 	int iChoice = 0;
 	bool bValid = true;
-	cin >> iChoice;
-	if (cin.fail())
+	std::cin >> iChoice;
+	if (std::cin.fail())
 		bValid = false;
 
 	if (bValid)
 		return iChoice;
 	else
 	{
-		cout << endl << "Wrong input type! Type number again." << endl;
+		std::cout << std::endl << "Wrong input type! Type number again." << std::endl;
 		std::cin.clear();
 		std::cin.ignore();
 		return get_user_input();
@@ -114,28 +113,28 @@ void game()
 	int * iString = new int[4];
 	generated_string(iString);
 
-	cout << endl << "Wyrazy ciagu: " << iString[0] << " " << iString[1] << " " << iString[2] << endl;
+	std::cout << std::endl << "Wyrazy ciagu: " << iString[0] << " " << iString[1] << " " << iString[2] << std::endl;
 	int iGuess = get_user_input();
 	bool bGuessed;
 	bGuessed = verify_result(iGuess, iString[3]);
 	if (bGuessed)
 	{
-		cout << "You guessed correctly!";
+		std::cout << "You guessed correctly!";
 		delete[] iString;
 	}
 	else
 	{
-		cout << "You lost!";
+		std::cout << "You lost!";
 		delete[] iString;
 	}
 }
 void description()
 {
 	system("cls");
-	cout <<			"Player has to guess next number." << endl;
-	cout << endl << "[ + ]  Game steps:";
-	cout << endl << "[ 1 ]  User sees 3 first numbers of a string (geometric or arythmetic only)";
-	cout << endl << "[ 2 ]  User has to input the next number";
-	cout << endl << "[ 3 ]  The results are going to be shown" << endl;;
+	std::cout <<			"Player has to guess next number." << std::endl;
+	std::cout << std::endl << "[ + ]  Game steps:";
+	std::cout << std::endl << "[ 1 ]  User sees 3 first numbers of a string (geometric or arythmetic only)";
+	std::cout << std::endl << "[ 2 ]  User has to input the next number";
+	std::cout << std::endl << "[ 3 ]  The results are going to be shown" << std::endl;;
 
 }
