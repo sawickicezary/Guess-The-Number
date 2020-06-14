@@ -13,10 +13,6 @@
 #include "functions.h"
 
 
-
-using namespace std;
-
-
 int main()
 {
 	
@@ -27,7 +23,7 @@ int main()
 		welcome_screen();
 		iUserInput = get_user_input();
 		choice(iUserInput);
-		cin.ignore();
-		cin.get();
+		std::cin.ignore();
+		std::cin.get();
 	}
 }
